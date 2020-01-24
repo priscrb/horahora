@@ -5,7 +5,7 @@ import MainBox from '../MainBox';
 function App() {
   return (
     <div className="flex justify-center ">
-      <div className="">
+      <div>
         <MainBox />
       </div>
     </div>
