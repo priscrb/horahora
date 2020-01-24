@@ -45,7 +45,7 @@ export default class MainBoxForm extends Component {
         <form className="mt-5 mb-7 ml-10 mr-10" onSubmit={this.handleSubmit}>
           <div className="mb-4 ">
             <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border focus:border-teal-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
               type="text"
               name="hour01"
               onChange={this.handleChange}
@@ -54,7 +54,7 @@ export default class MainBoxForm extends Component {
             />
 
             <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
               type="text"
               name="hour02"
               onChange={this.handleChange}
@@ -63,7 +63,7 @@ export default class MainBoxForm extends Component {
             />
 
             <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
               type="text"
               name="hour03"
               onChange={this.handleChange}
@@ -71,7 +71,7 @@ export default class MainBoxForm extends Component {
               placeholder="00 : 00"
             />
             <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
               type="text"
               name="hour04"
               onChange={this.handleChange}
