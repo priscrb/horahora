@@ -6,7 +6,7 @@ import Result from '../Result';
 const MainBox = () => {
   return (
     <div>
-      <div className="max-w-sm rounded overflow-hidden shadow-lg mt-5 mb-10 text-gray-700">
+      <div className="max-w-sm rounded overflow-hidden shadow-lg mt-10 mb-10 text-gray-700">
         <div className="px-5 py-4">
           <div className="text-center font-bold text-xl mb-2">
             HORAHORA <i class="far fa-clock"></i>
