@@ -29,6 +29,14 @@ export default class MainBoxForm extends Component {
     alert(
       `Hello my name is ${this.state.hour01} and my username is ${this.state.hour02}`
     );
+
+    // Clean the from after submitting
+    this.setState({
+      hour01: '',
+      hour02: '',
+      hour03: '',
+      hour04: '',
+    });
   }
 
   render() {
