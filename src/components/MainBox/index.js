@@ -1,6 +1,6 @@
 import React from 'react';
 import MainBoxForm from '../MainBoxForm';
-import CalculateButton from '../CalculateButton';
+
 import Result from '../Result';
 
 const MainBox = () => {
@@ -17,7 +17,6 @@ const MainBox = () => {
           <MainBoxForm />
 
           <div className="text-center ">
-            <CalculateButton />
             <Result />
           </div>
         </div>
