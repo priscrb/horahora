@@ -2,7 +2,7 @@ import React from 'react';
 
 const Result = () => {
   return (
-    <div className="mb-3 mt-5">
+    <div className="mb-3 mt-5 text-gray-700">
       <div className="text-xl font-light">
         <p>You have worked for</p>
       </div>

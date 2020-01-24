@@ -6,12 +6,12 @@ import Result from '../Result';
 const MainBox = () => {
   return (
     <div>
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <div className="max-w-sm rounded overflow-hidden shadow-lg mt-5 mb-10 text-gray-700">
         <div className="px-5 py-4">
           <div className="text-center font-bold text-xl mb-2">
             HORAHORA <i class="far fa-clock"></i>
           </div>
-          <p className=" text-center text-gray-700 text-base">
+          <p className=" text-center text-gray-600 text-base">
             Calculate your work hours.
           </p>
           <MainBoxForm />
@@ -22,6 +22,12 @@ const MainBox = () => {
           </div>
         </div>
       </div>
+
+      <footer className="text-center text-sm font-light text-gray-500 mb-3">
+        <p>
+          Build with ♥️ by <a href="https://priucodes.com">priucodes</a>{' '}
+        </p>
+      </footer>
     </div>
   );
 };
