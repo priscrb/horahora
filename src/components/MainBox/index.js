@@ -9,7 +9,7 @@ const MainBox = () => {
       <div className="max-w-sm rounded overflow-hidden shadow-lg mt-10 mb-10 text-gray-700">
         <div className="px-5 py-4">
           <div className="text-center font-bold text-xl mb-2">
-            HORAHORA <i className="far fa-clock"></i>
+            HORAHORA <i className="far fa-clock" />
           </div>
           <p className=" text-center text-gray-600 text-base">
             Calculate your work hours.

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CalculateButton from '../CalculateButton';
+import moment from 'moment';
 
 export default class MainBoxForm extends Component {
   constructor(props) {
@@ -14,6 +14,7 @@ export default class MainBoxForm extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   // Function handlers
@@ -26,9 +27,6 @@ export default class MainBoxForm extends Component {
   handleSubmit(evt) {
     // Don't forget to prevent default when we submit
     evt.preventDefault();
-    alert(
-      `Hello my name is ${this.state.hour01} and my username is ${this.state.hour02}`
-    );
 
     // Clean the from after submitting
     this.setState({
@@ -37,6 +35,20 @@ export default class MainBoxForm extends Component {
       hour03: '',
       hour04: '',
     });
+  }
+
+  // Calculate time
+  handleTime() {
+    const Intime = moment(this.state.hour01, 'HH:mm:ss');
+    const Outtime = moment(this.state.hour02, 'HH:mm:ss');
+    const Result = Outtime.diff(Intime, 'minutes');
+    const Hour = Result / 60;
+
+    console.log(Hour);
+  }
+
+  handleClick() {
+    this.handleTime();
   }
 
   render() {
@@ -61,26 +73,15 @@ export default class MainBoxForm extends Component {
               value={this.state.hour02}
               placeholder="00 : 00"
             />
-
-            <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
-              type="text"
-              name="hour03"
-              onChange={this.handleChange}
-              value={this.state.hour03}
-              placeholder="00 : 00"
-            />
-            <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
-              type="text"
-              name="hour04"
-              onChange={this.handleChange}
-              value={this.state.hour04}
-              placeholder="00 : 00"
-            />
           </div>
           <div className="text-center ">
-            <CalculateButton />
+            <button
+              type="submit"
+              onClick={this.handleClick}
+              className=" border-transparent bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+            >
+              Calculate Hours
+            </button>
           </div>
         </form>
       </div>
