@@ -49,9 +49,10 @@ export default class MainBoxForm extends Component {
     // const Break = InHourLunch.diff(OutHourLunch, 'minutes');
 
     const Result = Outtime.diff(Intime, 'minutes');
-    // const Total = Result - Break; // Total time  including the lunch break
-    const Hour = Math.round(Result / 60);
-    const Minute = Result % 60;
+    const Total = Result - 30; // Total time  including the lunch break
+    const some = Math.round(Result / 60);
+    const Minute = Total % 60;
+    const Hour = some - 1;
 
     this.setState({
       totalHour: Hour,
@@ -116,7 +117,10 @@ export default class MainBoxForm extends Component {
 
           <div className="text-center mt-10">
             <div className="text-xl font-light">
-              <p>Worked Hours:</p>
+              <p>Worked Hours </p>
+              <small>
+                ( - 30 min lunch break <span role="img">☕️</span>)
+              </small>{' '}
             </div>
             <div className="text-xl mt-3 font-bold">
               <h1>
