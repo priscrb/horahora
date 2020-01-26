@@ -111,7 +111,7 @@ export default class MainBoxForm extends Component {
               onClick={this.handleClick}
               className=" border-transparent bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
             >
-              Calcular Horas
+              Calculate This Shit
             </button>
           </div>
 
@@ -119,7 +119,11 @@ export default class MainBoxForm extends Component {
             <div className="text-xl font-light">
               <p>Worked Hours </p>
               <small>
-                ( - 30 min lunch break <span role="img">☕️</span>)
+                ( - 30 min lunch break{' '}
+                <span role="img" aria-label="lunch">
+                  ☕️
+                </span>
+                )
               </small>{' '}
             </div>
             <div className="text-xl mt-3 font-bold">
