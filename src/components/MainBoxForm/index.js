@@ -8,6 +8,8 @@ export default class MainBoxForm extends Component {
     this.state = {
       hour01: '',
       hour02: '',
+      // outLunchBreak: '00:00',
+      // returnLunchBreak: '00:00',
       totalHour: '',
       totalMinute: '',
     };
@@ -32,6 +34,8 @@ export default class MainBoxForm extends Component {
     this.setState({
       hour01: '',
       hour02: '',
+      // outLunchBreak: '',
+      // returnLunchBreak: '',
     });
   }
 
@@ -39,7 +43,13 @@ export default class MainBoxForm extends Component {
   handleTime() {
     const Intime = moment(this.state.hour01, 'HH:mm:ss');
     const Outtime = moment(this.state.hour02, 'HH:mm:ss');
+
+    // const OutHourLunch = moment(this.state.outLunchBreak, 'HH:mm:ss');
+    // const InHourLunch = moment(this.state.returnLunchBreak, 'HH:mm:ss');
+    // const Break = InHourLunch.diff(OutHourLunch, 'minutes');
+
     const Result = Outtime.diff(Intime, 'minutes');
+    // const Total = Result - Break; // Total time  including the lunch break
     const Hour = Math.round(Result / 60);
     const Minute = Result % 60;
 
@@ -64,8 +74,26 @@ export default class MainBoxForm extends Component {
               name="hour01"
               onChange={this.handleChange}
               value={this.state.hour01}
-              placeholder="00 : 00"
+              placeholder="00:00"
             />
+
+            {/* <input
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
+              type="text"
+              name="outLunchBreak"
+              value={this.state.outLunchBreak}
+              onChange={this.handleChange}
+              placeholder="Saída para o almoço (00:00)"
+            />
+
+            <input
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
+              type="text"
+              name="returnLunchBreak"
+              value={this.state.returnLunchBreak}
+              onChange={this.handleChange}
+              placeholder="Retorno do almoço (00:00)"
+            /> */}
 
             <input
               className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-teal-400"
@@ -73,7 +101,7 @@ export default class MainBoxForm extends Component {
               name="hour02"
               onChange={this.handleChange}
               value={this.state.hour02}
-              placeholder="00 : 00"
+              placeholder="00:00"
             />
           </div>
           <div className="text-center ">
@@ -82,18 +110,18 @@ export default class MainBoxForm extends Component {
               onClick={this.handleClick}
               className=" border-transparent bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
             >
-              Calculate Hours
+              Calcular Horas
             </button>
           </div>
 
           <div className="text-center mt-10">
             <div className="text-xl font-light">
-              <p>Ammount of hours worked today was:</p>
+              <p>Worked Hours:</p>
             </div>
             <div className="text-xl mt-3 font-bold">
               <h1>
-                {this.state.totalHour} Hours &amp; {this.state.totalMinute}{' '}
-                Minutes
+                <span>⏱ </span> {this.state.totalHour} hours &amp;{' '}
+                {this.state.totalMinute} minutes
               </h1>
             </div>
           </div>
