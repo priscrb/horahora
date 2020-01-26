@@ -9,9 +9,13 @@
 
 ---
 
-<p align="center"> A project that counts your work hours.
-    <br> 
+<p align="center"> Tired of having to calculate my work hours out of my mind (I'm not very good at doing that), I decided to create a very simple and  personal(or public, depending on your needs 🙃 ) app that make the calculation for me.
+    <br>
 </p>
+
+<img src="https://media.giphy.com/media/cRMgB2wjHhVN2tDD2z/giphy.gif" alt="counting" style="width: 300px">
+
+
 
 ## 📝 Table of Contents
 
@@ -53,11 +57,11 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## 🎈 Usage <a name="usage"></a>
 
-Go to the [horahora.com]() website.
+Go to the [horahora.com](https://horahora.netlify.com/) website.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+Just deploy it on Netlify.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -67,3 +71,9 @@ Add additional notes about how to deploy this on a live system.
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@priucodes](https://github.com/priucodes) - Idea & Initial work
+
+
+### Feel free to contribute!
+### Thank you!
+
+<img src="https://media.giphy.com/media/AeWoyE3ZT90YM/giphy.gif" alt="Thank you" style="width: 300px">
