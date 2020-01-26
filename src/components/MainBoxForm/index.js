@@ -8,7 +8,8 @@ export default class MainBoxForm extends Component {
     this.state = {
       hour01: '',
       hour02: '',
-      resulty: '',
+      totalHour: '',
+      totalMinute: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -39,10 +40,12 @@ export default class MainBoxForm extends Component {
     const Intime = moment(this.state.hour01, 'HH:mm:ss');
     const Outtime = moment(this.state.hour02, 'HH:mm:ss');
     const Result = Outtime.diff(Intime, 'minutes');
-    const Hour = Result / 60;
+    const Hour = Math.round(Result / 60);
+    const Minute = Result % 60;
 
     this.setState({
-      resulty: Hour,
+      totalHour: Hour,
+      totalMinute: Minute,
     });
 
     // console.log(this.state.resulty);
@@ -90,7 +93,10 @@ export default class MainBoxForm extends Component {
               <p>Ammount of hours worked today was:</p>
             </div>
             <div className="text-xl mt-3 font-bold">
-              <h1>{this.state.resulty}</h1>
+              <h1>
+                {this.state.totalHour} Hours &amp; {this.state.totalMinute}{' '}
+                Minutes
+              </h1>
             </div>
           </div>
         </form>
