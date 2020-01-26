@@ -47,8 +47,6 @@ export default class MainBoxForm extends Component {
       totalHour: Hour,
       totalMinute: Minute,
     });
-
-    // console.log(this.state.resulty);
   }
 
   handleClick() {

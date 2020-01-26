@@ -1,8 +1,6 @@
 import React from 'react';
 import MainBoxForm from '../MainBoxForm';
 
-import Result from '../Result';
-
 const MainBox = () => {
   return (
     <div>
