@@ -15,10 +15,6 @@ const MainBox = () => {
             Calculate your work hours.
           </p>
           <MainBoxForm />
-
-          <div className="text-center ">
-            <Result />
-          </div>
         </div>
       </div>
 
